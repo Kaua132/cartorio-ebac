@@ -1,6 +1,6 @@
-#include <stdio.h> // biblioteca de comunicaÁao com o usuario
-#include <stdlib.h> // biblioteca de alocalao de espaÁo em memoria 
-#include <locale.h> //bibliotaca de alocaÁoes de texto por regiao
+#include <stdio.h> // biblioteca de comunica√ßao com o usuario
+#include <stdlib.h> // biblioteca de alocalao de espa√ßo em memoria 
+#include <locale.h> //bibliotaca de aloca√ßoes de texto por regiao
 #include <string.h> //biblioteca responsavel pelas string
 
 
@@ -88,12 +88,12 @@ void consultar(){
 	file = fopen(cpf,"r");
 	
 	if(file == NULL){
-		printf("n„o foi possivel abrir esse arquivo!\n");
+		printf("n√£o foi possivel abrir esse arquivo!\n");
 	}
 	
 	while(fgets(conteudo,200,file)!=NULL){
 		
-		printf("\nessas s„o as informaÁoes do usuario:");
+		printf("\nessas s√£o as informa√ßoes do usuario:");
 		printf("%s",conteudo);
 		printf("/n/n");
 		
@@ -133,12 +133,12 @@ int main(){
 	
 	 
 	
-	printf("### CartÛrio da EBAC ### \n \n");
-	printf("Escolha a opÁ„o desejadas no menu: \n \n");
+	printf("### Cart√≥rio da EBAC ### \n \n");
+	printf("Escolha a op√ß√£o desejadas no menu: \n \n");
 	printf("\t1 - Resgistrar nomes \n");
 	printf("\t2 - Consultar nomes \n");
 	printf("\t3 - Deletar nomes\n");
-	printf("opÁao:");
+	printf("op√ßao:");
 	
 	scanf("%d",&opcao); // escolha do usuario 
 	
@@ -160,7 +160,7 @@ int main(){
 			break;
 			
 		default:
-			printf("essa opÁao nao esta disponivel \n");
+			printf("essa op√ßao nao esta disponivel \n");
 			system("pause");
 			system("cls");
 			break;
