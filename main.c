@@ -1,6 +1,6 @@
-#include <stdio.h> // biblioteca de comunica√ßao com o usuario
-#include <stdlib.h> // biblioteca de alocalao de espa√ßo em memoria 
-#include <locale.h> //bibliotaca de aloca√ßoes de texto por regiao
+#include <stdio.h> // biblioteca de comunicaÁao com o usuario
+#include <stdlib.h> // biblioteca de alocalao de espaÁo em memoria 
+#include <locale.h> //bibliotaca de alocaÁoes de texto por regiao
 #include <string.h> //biblioteca responsavel pelas string
 
 
@@ -88,12 +88,12 @@ void consultar(){
 	file = fopen(cpf,"r");
 	
 	if(file == NULL){
-		printf("n√£o foi possivel abrir esse arquivo!\n");
+		printf("n„o foi possivel abrir esse arquivo!\n");
 	}
 	
 	while(fgets(conteudo,200,file)!=NULL){
 		
-		printf("\nessas s√£o as informa√ßoes do usuario:");
+		printf("\nessas s„o as informaÁoes do usuario:");
 		printf("%s",conteudo);
 		printf("/n/n");
 		
@@ -112,7 +112,7 @@ void deletar(){
 	printf("digite o cpd a ser deletado:");
 	scanf("%s",cpf);
 	
-	revome(cpf);
+	remove(cpf);
 	
 	
 }
@@ -125,20 +125,32 @@ int main(){
 	
 	int x = 1;
 	
-	for(x=1;x=1;){
+	char senha[10]="a";
+	printf("### CartÛrio da EBAC ### \n\n");
+    printf("Login de administrador \n\nDigite a sua senha: ");
+    scanf("%s", senha);
+	
+	if (strcmp(senha, "admin") != 0) {
+        printf("Senha errada!\n");
+        return 1;
+    }
 	
 	
+for(x=1;x=1;){
+
+
 	setlocale(LC_ALL,"Portuguese"); // definindo a linguagem
 	
 	
 	 
 	
-	printf("### Cart√≥rio da EBAC ### \n \n");
-	printf("Escolha a op√ß√£o desejadas no menu: \n \n");
+	printf("### CartÛrio da EBAC ### \n \n");
+	printf("Escolha a opÁ„o desejadas no menu: \n \n");
 	printf("\t1 - Resgistrar nomes \n");
 	printf("\t2 - Consultar nomes \n");
 	printf("\t3 - Deletar nomes\n");
-	printf("op√ßao:");
+	printf("\t4 - sair do sistema\n");
+	printf("opÁao:");
 	
 	scanf("%d",&opcao); // escolha do usuario 
 	
@@ -159,8 +171,15 @@ int main(){
 			deletar(); 
 			break;
 			
+		case 4:
+			printf("obrigado por utilizar o sistema\n");
+			return 0; 
+			break;
+			
+		
+			
 		default:
-			printf("essa op√ßao nao esta disponivel \n");
+			printf("essa opÁao nao esta disponivel \n");
 			system("pause");
 			system("cls");
 			break;
@@ -177,9 +196,7 @@ int main(){
 	
 	}
 	
-	
-	
+
+}
 
 	
-	
-}
